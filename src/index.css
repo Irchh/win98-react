@@ -1,13 +1,191 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root, #Base, body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 0;
+  overflow: hidden;
+  background-color: #00807F;
+}
+
+/* Window stuff */
+
+.window {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid #dfdfdf;
+  border-top: 1px solid #dfdfdf;
+  padding-bottom: 2px;
+  padding-right: 2px;
+}
+
+.titleBar {
+  white-space: nowrap;
+  width:inherit;
+  width: 498px;
+  height:18px;
+  border: 1px solid #c0c0c0;
+  background-color: #a1a1a1;
+}
+
+.titleBar > p {
+  overflow: none;
+  user-select: none;
+  display: inline-block;
+  margin:0;
+  padding-left:1px;
+  padding-top:1px;
+  text-align:left;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.WindowIcon {
+  display: inline-block;
+  float:left;
+  margin: 1px;
+  margin-left: 2px;
+  width: 16px;
+  height: 16px;
+}
+
+.welcomeIcon {
+  background-image: url("res/img/window/icon/welcome.png");
+}
+
+.TitleButtonClose {
+  background-image: url("res/img/window/btn/close.png");
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.TitleButtonMax {
+  background-image: url("res/img/window/btn/maximize.png");
+}
+
+.TitleButtonMin {
+  background-image: url("res/img/window/btn/minimize.png");
+}
+
+.Icon {
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+.TitleButton {
+  float: right;
+  border:none;
+  margin-top: 2px;
+
+  width:16px;
+  height:14px;
+}
+
+.TitleButton:focus {
+  outline: none;
+}
+
+.WindowContent > * {
+  height: 100%;
+  width: 100%;
+  margin: 0;padding: 0;
+  border: none;
+}
+
+.WindowContent {
+  margin: 0;padding: 0;
+}
+
+.noMouseEvents {
+  pointer-events: none;
+}
+
+/* 9x window stuff */
+
+.w9xb1 {
+  width:100%;
+  height:100%;
+  border-right: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  background-color:#c0c0c0;
+}
+
+/* 9x taskbar stuff */
+
+.win9xTaskBar {
+  position: absolute;
+  width: 100%;
+  height: 28px;
+  background-color: white;
+  border-top: 1px solid #dfdfdf;
+  bottom: 0px;
+  z-index: 8000;
+}
+
+.win9xTaskBar > div {
+  background-color: #c0c0c0;
+  width: 100%;
+  margin-top: 1px;
+  height: 26px;
+}
+
+.widgetArea {
+  float: right;
+  margin: 2px;
+
+  border-left: 1px solid #808080;
+  border-top: 1px solid #808080;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+
+  height:22px;
+}
+
+.widgetArea > * {
+  user-select: none;
+  float: right;
+  position: relative;
+  margin: 2px;
+}
+
+.Start9x {
+  float: left;
+  border:none;
+  margin: 2px;
+
+  width:54px;
+  height:22px;
+  background-image: url("res/img/taskbar/start.png");
+}
+
+.Start9x:focus {
+  background-image: url("res/img/taskbar/startPressed.png");
+  outline: none;
+}
+
+.w9xSep1 {
+  float: left;
+  margin: 2px;
+  height: 22px;
+  width: 1px;
+  border-left: 1px solid #808080;
+  background-color: white;
+}
+
+.w9xSep2 {
+  float: left;
+  margin: 4px;
+  margin-left: 0;
+  height: 16px;
+  width: 1px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid #808080;
+  border-right: 1px solid #808080;
+  background-color: #c0c0c0;
 }
